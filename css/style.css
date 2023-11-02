@@ -39,13 +39,18 @@ img {
 }
 
 #prevBtn {
-    position: absolute;
-    top: calc(16vh + 2rem);
-    left: 10vw;
+    top: calc(17vh + 2rem);
+    left: calc(10vw + 1rem);
 }
 
 #nextBtn {
+    top: calc(17vh + 2rem);
+    right: calc(10vw + 1rem);
+}
+
+.btnShape{
     position: absolute;
-    top: calc(16vh + 2rem);
-    right: 10vw;
+    border-radius: 50%;
+    width: 3rem;
+    aspect-ratio: 1 / 1;
 }
