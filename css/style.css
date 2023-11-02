@@ -13,24 +13,39 @@ body {
 #carousel {
     width: 80%;
     height: 40vh;
-    margin: 0 auto;
-}
-
-#carousel img {
-    width: 80%;
-    height: 40vh;
-    object-fit: cover;
-    opacity: 0;
+    margin: 2rem auto;
     
 }
 
-#carousel .active {
+img {
+    width: 80%;
+    height: 40vh;
+    min-height: 10rem;
+    object-fit: cover;
+    opacity: 0;
+    border-radius: 0.9rem;
+    
+}
+
+.active {
     width: 100%;
     opacity: 1;
     position: relative;
 }
 
-#carousel .wait {
+.wait {
     position: absolute;
 
+}
+
+#prevBtn {
+    position: absolute;
+    top: calc(16vh + 2rem);
+    left: 10vw;
+}
+
+#nextBtn {
+    position: absolute;
+    top: calc(16vh + 2rem);
+    right: 10vw;
 }
