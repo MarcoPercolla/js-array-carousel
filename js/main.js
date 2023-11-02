@@ -21,3 +21,15 @@ let currentImg = 0;
 const images = document.querySelectorAll("#carousel img");
 images[currentImg].classList.remove("wait");
 images[currentImg].classList.add("active");
+
+
+document.getElementById("nextBtn").addEventListener("click", function () {
+    
+    if (currentImg < images.length - 1) {
+        images[currentImg].classList.remove("active");
+        images[currentImg].classList.add("wait");
+        currentImg++;
+        images[currentImg].classList.add("active");
+        images[currentImg].classList.remove("wait");
+    }
+});
