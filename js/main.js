@@ -11,6 +11,13 @@ const arrayImmagini = [
 let elementImmagini = "";
 for (let i = 0; i < arrayImmagini.length; i++) {
     const linkImmagine = arrayImmagini[i];
-    elementImmagini += `<img src="${linkImmagine}">`;
+    elementImmagini += `<img class="wait" src="${linkImmagine}">`;
+    
 }
 document.getElementById("carousel").innerHTML = elementImmagini;
+
+
+let currentImg = 0;
+const images = document.querySelectorAll("#carousel img");
+images[currentImg].classList.remove("wait");
+images[currentImg].classList.add("active");
