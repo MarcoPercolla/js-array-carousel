@@ -22,19 +22,22 @@ img {
     height: 40vh;
     min-height: 10rem;
     object-fit: cover;
-    opacity: 0;
     border-radius: 0.9rem;
     
 }
 
 .active {
     width: 100%;
-    opacity: 1;
     position: relative;
+    transition: 1s;
+    opacity: 1;
 }
 
 .wait {
+    
     position: absolute;
+    transition: 2s;
+    opacity: 0;
 
 }
 
