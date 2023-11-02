@@ -49,5 +49,11 @@ document.getElementById("prevBtn").addEventListener("click", function () {
         currentImg--;
         images[currentImg].classList.add("active");
         images[currentImg].classList.remove("wait");
+    }else {
+        images[currentImg].classList.remove("active");
+        images[currentImg].classList.add("wait");
+        currentImg = (images.length - 1);
+        images[currentImg].classList.add("active");
+        images[currentImg].classList.remove("wait");
     }
 });
