@@ -33,3 +33,14 @@ document.getElementById("nextBtn").addEventListener("click", function () {
         images[currentImg].classList.remove("wait");
     }
 });
+
+document.getElementById("prevBtn").addEventListener("click", function () {
+    
+    if (currentImg > 0) {
+        images[currentImg].classList.remove("active");
+        images[currentImg].classList.add("wait");
+        currentImg--;
+        images[currentImg].classList.add("active");
+        images[currentImg].classList.remove("wait");
+    }
+});
