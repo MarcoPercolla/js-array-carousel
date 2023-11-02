@@ -11,7 +11,7 @@ const arrayImmagini = [
 let elementImmagini = "";
 for (let i = 0; i < arrayImmagini.length; i++) {
     const linkImmagine = arrayImmagini[i];
-    elementImmagini += `<img class="wait" src="${linkImmagine}">`;
+    elementImmagini += `<img class="wait wideFull" src="${linkImmagine}">`;
     
 }
 document.getElementById("carousel").innerHTML = elementImmagini;
@@ -55,5 +55,61 @@ document.getElementById("prevBtn").addEventListener("click", function () {
         currentImg = (images.length - 1);
         images[currentImg].classList.add("active");
         images[currentImg].classList.remove("wait");
+    }
+});
+
+const array2Immagini = [
+    "img/01.webp",
+    "img/02.webp",
+    "img/03.webp",
+    "img/04.webp",
+    "img/05.webp",
+]
+
+let element2Immagini = "";
+for (let i = 0; i < array2Immagini.length; i++) {
+    const link2Immagine = array2Immagini[i];
+    element2Immagini += `<img class="wait wideMid" src="${link2Immagine}">`;
+    
+}
+document.getElementById("carouselMin").innerHTML = element2Immagini;
+
+let current2Img = 0;
+const images2 = document.querySelectorAll("#carouselMin img");
+images2[current2Img].classList.remove("wait");
+images2[current2Img].classList.add("active");
+
+document.getElementById("nextMinBtn").addEventListener("click", function () {
+    
+    if (current2Img < images2.length - 1) {
+        images2[current2Img].classList.remove("active");
+        images2[current2Img].classList.add("wait");
+        current2Img++;
+        images2[current2Img].classList.add("active");
+        images2[current2Img].classList.remove("wait");
+    } else{
+        images2[current2Img].classList.remove("active");
+        images2[current2Img].classList.add("wait");
+        current2Img = (0);
+        images2[current2Img].classList.add("active");
+        images2[current2Img].classList.remove("wait");
+        
+    }
+});
+
+document.getElementById("prevMinBtn").addEventListener("click", function () {
+    
+    if (current2Img > 0) {
+        images2[current2Img].classList.remove("active");
+        images2[current2Img].classList.add("wait");
+        current2Img--;
+        images2[current2Img].classList.add("active");
+        images2[current2Img].classList.remove("wait");
+    }else {
+        images2[current2Img].classList.remove("active");
+        images2[current2Img].classList.add("wait");
+        current2Img = (images2.length - 1);
+        images2[current2Img].classList.add("active");
+        images2[current2Img].classList.remove("wait");
     }
 });

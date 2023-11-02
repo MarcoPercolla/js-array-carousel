@@ -11,24 +11,43 @@ body {
 }
 
 #carousel {
+    position: relative;
     width: 80%;
     height: 40vh;
     margin: 2rem auto;
     
 }
 
-img {
+#carouselMin {
+    position: relative;
     width: 80%;
-    height: 40vh;
-    min-height: 10rem;
+    height: 70vh;
+    margin: 2rem auto;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.widefull {
+    
+    
     object-fit: cover;
     border-radius: 0.9rem;
     
 }
 
+.wideMid {
+
+    width: 80%;
+    object-fit: cover;
+    border-radius: 0.9rem;
+}
+
 .active {
-    width: 100%;
-    position: relative;
+  
+    position: absolute;
     transition: 1s;
     opacity: 1;
 }
@@ -38,6 +57,7 @@ img {
     position: absolute;
     transition: 2s;
     opacity: 0;
+    
 
 }
 
@@ -50,6 +70,15 @@ img {
     top: calc(17vh + 2rem);
     right: calc(10vw + 1rem);
 }
+
+#prevMinBtn {
+    right: 10px;
+}
+
+#nextMinBtn {
+    
+}
+
 
 .btnShape{
     position: absolute;
