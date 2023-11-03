@@ -14,8 +14,7 @@ body {
     position: relative;
     width: 80%;
     height: 40vh;
-    margin: 2rem auto;
-    
+    margin: 2rem auto;   
 }
 
 #secondCarusel{
@@ -27,8 +26,11 @@ body {
 #carouselMin {
     position: relative;
     width: 80%;
-    height: 100%;
-    
+    height: 100%;   
+}
+
+#miniSide{
+    position: relative;
 }
 
 img{
@@ -36,16 +38,12 @@ img{
     height: 100%;
 }
 
-.widefull {
-    
-    
+.widefull {  
     object-fit: cover;
-    border-radius: 0.9rem;
-    
+    border-radius: 0.9rem; 
 }
 
 .wideMid {
-
     width: 100%;
     object-fit: cover;
     border-radius: 0.9rem;
@@ -57,30 +55,24 @@ img{
     align-self: flex-end;
 }
 
-.wideMini {
-    
+.wideMini {   
     width: 100%;
     height: 20%;
     object-fit: cover;
     border-radius: 0.9rem;
     object-position: right;
-
 }
 
-.active {
-  
+.active { 
     position: absolute;
     transition: 1s;
     opacity: 1;
 }
 
-.wait {
-    
+.wait {   
     position: absolute;
     transition: 2s;
     opacity: 0;
-    
-
 }
 
 .miniWait {
@@ -92,26 +84,33 @@ img{
 }
 
 #prevBtn {
+    position: absolute;
     top: calc(17vh + 2rem);
     left: calc(10vw + 1rem);
 }
 
 #nextBtn {
+    position: absolute;
     top: calc(17vh + 2rem);
     right: calc(10vw + 1rem);
 }
 
 #prevMinBtn {
-    right: 10px;
+    position: absolute;
+    top: auto;
+    margin-top: 32vh;
+    left: auto;
+    margin-left: 0.5vw;
 }
 
 #nextMinBtn {
-    
+    position: absolute;
+    top: auto;
+    margin-top: 32vh;
+    left: 70vw;
 }
 
-
-.btnShape{
-    position: absolute;
+.btnShape{   
     border-radius: 50%;
     width: 3rem;
     aspect-ratio: 1 / 1;
