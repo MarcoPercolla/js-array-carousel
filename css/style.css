@@ -83,6 +83,14 @@ img{
 
 }
 
+.miniWait {
+    filter: brightness(0.7);
+}
+
+.miniActive{
+    order: 0;
+}
+
 #prevBtn {
     top: calc(17vh + 2rem);
     left: calc(10vw + 1rem);
