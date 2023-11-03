@@ -67,15 +67,19 @@ const array2Immagini = [
 ]
 
 let element2Immagini = "";
+let elementMiniImmagini = "";
+
 for (let i = 0; i < array2Immagini.length; i++) {
     const link2Immagine = array2Immagini[i];
-    element2Immagini += `<img class="wait wideMid" src="${link2Immagine}">`;
+    element2Immagini += `<img id="midWidth" class="wait wideMid" src="${link2Immagine}">`;
+    elementMiniImmagini += `<img class="widemini" src="${link2Immagine}">`;
     
 }
-document.getElementById("carouselMin").innerHTML = element2Immagini;
+document.getElementById("carouselMin").innerHTML += element2Immagini;
+document.getElementById("miniSide").innerHTML = elementMiniImmagini;
 
 let current2Img = 0;
-const images2 = document.querySelectorAll("#carouselMin img");
+const images2 = document.querySelectorAll("#midWidth");
 images2[current2Img].classList.remove("wait");
 images2[current2Img].classList.add("active");
 
